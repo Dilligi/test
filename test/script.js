@@ -16,7 +16,7 @@ async function parseEvent() {
     }
 }
 
-let shown = false, trPrev = null;
+let shown = false;
 
 function showEvent() {
     $.ajax({
@@ -35,7 +35,7 @@ function showEvent() {
 
             });
 
-            if (!shown && trPrev != tr) {
+            if (!shown) {
                 $('table').append(tr);
                 shown = true;
             }
